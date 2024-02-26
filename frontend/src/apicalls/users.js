@@ -31,9 +31,3 @@ export const GetCurrentUser = async (payload) => {
     
  }
 }
-
-// Usage of URL params
-// export const MockParm = async(id) => {
-//     const response = await axiosInstance.post(`${BASEURL}/api/movies?movieId=${id}`, payload)
-// }
-
