@@ -1,8 +1,8 @@
 import { axiosInstance } from "./axiosinstance"
-export const BASEURL = window.location.href;
+export const BASEURL = window.location.host;
 export const MakePayment = async (payload)=>{
     try {
-        const response = await axiosInstance.post(`${BASEURL}/api/booking/make-payment`, payload)
+        const response = await axiosInstance.post(`https://${BASEURL}/api/booking/make-payment`, payload)
         return response
     } catch (error) {
         return error
@@ -13,7 +13,7 @@ export const MakePayment = async (payload)=>{
 export const BookShowTickets = async (payload) => {
     try {
       const response = await axiosInstance.post(
-        `${BASEURL}/api/booking/book-show`,
+        `https://${BASEURL}/api/booking/book-show`,
         payload
       );
       return response;
@@ -25,7 +25,7 @@ export const BookShowTickets = async (payload) => {
   // get bookings of a user
   export const GetBookingsOfUser = async () => {
     try {
-      const response = await axiosInstance.get(`${BASEURL}/api/booking/get-bookings`);
+      const response = await axiosInstance.get(`https://${BASEURL}/api/booking/get-bookings`);
       return response;
     } catch (error) {
       return error;

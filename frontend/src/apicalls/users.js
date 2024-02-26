@@ -5,7 +5,7 @@ const { axiosInstance } = require("./axiosinstance");
 
 export const RegisterUser = async (payload)=>{
     try {
-        const response = await axiosInstance.post(`${BASEURL}/api/users/register`, payload)
+        const response = await axiosInstance.post(`https://${BASEURL}/api/users/register`, payload)
         return response
     } catch (error) {
         return error
@@ -15,7 +15,7 @@ export const RegisterUser = async (payload)=>{
 
 export const LoginUser = async (payload)=>{
     try {
-        const response = await axiosInstance.post(`${BASEURL}/api/users/login`, payload)
+        const response = await axiosInstance.post(`https://${BASEURL}/api/users/login`, payload)
         return response
     } catch (error) {
         return error
@@ -25,7 +25,7 @@ export const LoginUser = async (payload)=>{
 //get Current User
 export const GetCurrentUser = async (payload) => {
  try {
-    const response = await axiosInstance.get(`${BASEURL}/api/users/get-current-user`,payload)
+    const response = await axiosInstance.get(`https://${BASEURL}/api/users/get-current-user`,payload)
     return response.data;
  } catch (error) {
     
