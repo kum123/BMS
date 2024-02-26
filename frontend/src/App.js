@@ -22,10 +22,10 @@ function App() {
       <p>BMS Application</p>
       <BrowserRouter>
         <Routes>
-          <Route path='/dashboard' element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path='/' element={<ProtectedRoute><Home /></ProtectedRoute>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path={"/profile"} element={<ProtectedRoute><Profile /></ProtectedRoute>}/>
+          <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>}/>
           <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
           <Route path="/movie/:id" element={<ProtectedRoute><TheatersForMovie /></ProtectedRoute>} />
           <Route path="/book-show/:showId" element={<ProtectedRoute><BookShow /></ProtectedRoute>} />
