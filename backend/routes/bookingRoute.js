@@ -1,7 +1,6 @@
 const authMiddleware = require("../middleware/authMiddleware");
 const Booking = require("../models/bookingModel");
 const Show = require("../models/showModel");
-const show = require("../models/showModel");
 const router = require("express").Router();
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 
