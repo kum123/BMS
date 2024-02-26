@@ -1,5 +1,5 @@
 import { axiosInstance } from "./axiosinstance"
-export const BASEURL = window.location.host;
+export const BASEURL = 'bms-project-7r4x.onrender.com';
 export const MakePayment = async (payload)=>{
     try {
         const response = await axiosInstance.post(`https://${BASEURL}/api/booking/make-payment`, payload)
